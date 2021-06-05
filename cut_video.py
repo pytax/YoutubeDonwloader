@@ -2,6 +2,8 @@ from PySide2.QtWidgets import *
 from ui_main import Ui_MainWindow
 import sys
 from pytube import YouTube, Playlist
+from moviepy.video.io.ffmpeg_tools import ffmpeg_extract_subclip
+
 
 class MainWindow(QMainWindow, Ui_MainWindow):
     def __init__(self):
@@ -9,6 +11,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.setupUi(self)
         self.setWindowTitle("Youtube Downloader")
         self.btn_donwload.clicked.connect(self.yt_downloader)
+        self.btn_corvert.clicked.connect(self.converter_video)
+        self.btn_open.clicked.connect(self.open_file)
 
 
     def yt_downloader(self):
@@ -40,6 +44,20 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             msg.setText("Playlist baixada com sucesso!")
             msg.exec_()
 
+
+    def open_file(self):
+
+        self.file =  QFileDialog.getOpenFileName(self, "Selecione o vídeo desejado")
+        self.txt_file.setText(str(self.file[0]))
+
+    def converter_video(self):
+        ffmpeg_extract_subclip(self.txt_file.text(), int(self.txt_seg_inicial.text()), int(self.txt_seg_final.text()),
+                               targetname="video_convertido.mp4")
+
+        msg = QMessageBox()
+        msg.setIcon(QMessageBox.Information)
+        msg.setText("video convertido com sucesso!")
+        msg.exec_()
 
 
 if __name__ == '__main__':

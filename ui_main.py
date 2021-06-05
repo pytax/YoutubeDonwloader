@@ -17,14 +17,20 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(582, 525)
+        MainWindow.resize(723, 640)
         MainWindow.setStyleSheet(u"background-color: rgb(255, 255, 255);")
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
-        self.verticalLayout_2 = QVBoxLayout(self.centralwidget)
+        self.verticalLayout_4 = QVBoxLayout(self.centralwidget)
+        self.verticalLayout_4.setObjectName(u"verticalLayout_4")
+        self.tabWidget = QTabWidget(self.centralwidget)
+        self.tabWidget.setObjectName(u"tabWidget")
+        self.tabWidget.setStyleSheet(u"background-color: rgb(221, 221, 221);")
+        self.tab = QWidget()
+        self.tab.setObjectName(u"tab")
+        self.verticalLayout_2 = QVBoxLayout(self.tab)
         self.verticalLayout_2.setObjectName(u"verticalLayout_2")
-        self.verticalLayout_2.setContentsMargins(20, 20, 20, 20)
-        self.frame = QFrame(self.centralwidget)
+        self.frame = QFrame(self.tab)
         self.frame.setObjectName(u"frame")
         self.frame.setStyleSheet(u"background-color: rgb(221, 221, 221);")
         self.frame.setFrameShape(QFrame.StyledPanel)
@@ -181,9 +187,157 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_2.addWidget(self.frame)
 
+        self.tabWidget.addTab(self.tab, "")
+        self.tab_2 = QWidget()
+        self.tab_2.setObjectName(u"tab_2")
+        self.verticalLayout_7 = QVBoxLayout(self.tab_2)
+        self.verticalLayout_7.setObjectName(u"verticalLayout_7")
+        self.verticalSpacer_7 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
+
+        self.verticalLayout_7.addItem(self.verticalSpacer_7)
+
+        self.horizontalLayout_3 = QHBoxLayout()
+        self.horizontalLayout_3.setObjectName(u"horizontalLayout_3")
+        self.horizontalSpacer_8 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.horizontalLayout_3.addItem(self.horizontalSpacer_8)
+
+        self.label_5 = QLabel(self.tab_2)
+        self.label_5.setObjectName(u"label_5")
+        self.label_5.setFont(font)
+
+        self.horizontalLayout_3.addWidget(self.label_5)
+
+        self.label_7 = QLabel(self.tab_2)
+        self.label_7.setObjectName(u"label_7")
+        self.label_7.setFont(font)
+        self.label_7.setStyleSheet(u"background-color: rgb(207, 0, 0);\n"
+"color: rgb(255, 255, 255);\n"
+"border-radius:7px")
+
+        self.horizontalLayout_3.addWidget(self.label_7)
+
+        self.horizontalSpacer_7 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.horizontalLayout_3.addItem(self.horizontalSpacer_7)
+
+
+        self.verticalLayout_7.addLayout(self.horizontalLayout_3)
+
+        self.verticalSpacer_9 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
+
+        self.verticalLayout_7.addItem(self.verticalSpacer_9)
+
+        self.label_6 = QLabel(self.tab_2)
+        self.label_6.setObjectName(u"label_6")
+        self.label_6.setFont(font)
+        self.label_6.setAlignment(Qt.AlignCenter)
+
+        self.verticalLayout_7.addWidget(self.label_6)
+
+        self.horizontalLayout_4 = QHBoxLayout()
+        self.horizontalLayout_4.setObjectName(u"horizontalLayout_4")
+        self.txt_file = QLineEdit(self.tab_2)
+        self.txt_file.setObjectName(u"txt_file")
+        self.txt_file.setMinimumSize(QSize(0, 35))
+        font3 = QFont()
+        font3.setPointSize(10)
+        self.txt_file.setFont(font3)
+        self.txt_file.setStyleSheet(u"background-color: rgb(255, 255, 255);")
+        self.txt_file.setAlignment(Qt.AlignCenter)
+
+        self.horizontalLayout_4.addWidget(self.txt_file)
+
+        self.btn_open = QPushButton(self.tab_2)
+        self.btn_open.setObjectName(u"btn_open")
+        self.btn_open.setMinimumSize(QSize(100, 35))
+        self.btn_open.setCursor(QCursor(Qt.PointingHandCursor))
+        self.btn_open.setStyleSheet(u"QPushButton{background-color:#fff; color:black; border: solid 0px; font: 75 16px; border-radius:7px} \n"
+"QPushButton:hover{background-color:rgb(227, 24, 54); color:#fff}")
+
+        self.horizontalLayout_4.addWidget(self.btn_open)
+
+
+        self.verticalLayout_7.addLayout(self.horizontalLayout_4)
+
+        self.verticalSpacer_10 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
+
+        self.verticalLayout_7.addItem(self.verticalSpacer_10)
+
+        self.horizontalLayout_5 = QHBoxLayout()
+        self.horizontalLayout_5.setObjectName(u"horizontalLayout_5")
+        self.verticalLayout_5 = QVBoxLayout()
+        self.verticalLayout_5.setObjectName(u"verticalLayout_5")
+        self.label_8 = QLabel(self.tab_2)
+        self.label_8.setObjectName(u"label_8")
+        font4 = QFont()
+        font4.setPointSize(11)
+        self.label_8.setFont(font4)
+        self.label_8.setAlignment(Qt.AlignCenter)
+
+        self.verticalLayout_5.addWidget(self.label_8)
+
+        self.txt_seg_inicial = QLineEdit(self.tab_2)
+        self.txt_seg_inicial.setObjectName(u"txt_seg_inicial")
+        self.txt_seg_inicial.setFont(font3)
+        self.txt_seg_inicial.setStyleSheet(u"background-color: rgb(255, 255, 255);")
+        self.txt_seg_inicial.setAlignment(Qt.AlignCenter)
+
+        self.verticalLayout_5.addWidget(self.txt_seg_inicial)
+
+
+        self.horizontalLayout_5.addLayout(self.verticalLayout_5)
+
+        self.verticalLayout_6 = QVBoxLayout()
+        self.verticalLayout_6.setObjectName(u"verticalLayout_6")
+        self.label_9 = QLabel(self.tab_2)
+        self.label_9.setObjectName(u"label_9")
+        self.label_9.setFont(font4)
+        self.label_9.setAlignment(Qt.AlignCenter)
+
+        self.verticalLayout_6.addWidget(self.label_9)
+
+        self.txt_seg_final = QLineEdit(self.tab_2)
+        self.txt_seg_final.setObjectName(u"txt_seg_final")
+        self.txt_seg_final.setFont(font3)
+        self.txt_seg_final.setStyleSheet(u"background-color: rgb(255, 255, 255);")
+        self.txt_seg_final.setAlignment(Qt.AlignCenter)
+
+        self.verticalLayout_6.addWidget(self.txt_seg_final)
+
+
+        self.horizontalLayout_5.addLayout(self.verticalLayout_6)
+
+
+        self.verticalLayout_7.addLayout(self.horizontalLayout_5)
+
+        self.verticalSpacer_8 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
+
+        self.verticalLayout_7.addItem(self.verticalSpacer_8)
+
+        self.btn_corvert = QPushButton(self.tab_2)
+        self.btn_corvert.setObjectName(u"btn_corvert")
+        self.btn_corvert.setMinimumSize(QSize(0, 35))
+        self.btn_corvert.setCursor(QCursor(Qt.PointingHandCursor))
+        self.btn_corvert.setStyleSheet(u"QPushButton{background-color:#fff; color:black; border: solid 0px; font: 75 16px; border-radius:7px; margin-left:100px; margin-right:100px} \n"
+"QPushButton:hover{background-color:rgb(227, 24, 54); color:#fff}")
+
+        self.verticalLayout_7.addWidget(self.btn_corvert)
+
+        self.verticalSpacer_11 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
+
+        self.verticalLayout_7.addItem(self.verticalSpacer_11)
+
+        self.tabWidget.addTab(self.tab_2, "")
+
+        self.verticalLayout_4.addWidget(self.tabWidget)
+
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
+
+        self.tabWidget.setCurrentIndex(0)
+
 
         QMetaObject.connectSlotsByName(MainWindow)
     # setupUi
@@ -199,5 +353,17 @@ class Ui_MainWindow(object):
         self.label_4.setText(QCoreApplication.translate("MainWindow", u"Cole o link do v\u00eddeo na caixa abaixo", None))
         self.txt_link.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Link para do v\u00eddeo para download", None))
         self.btn_donwload.setText(QCoreApplication.translate("MainWindow", u"BAIXAR", None))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab), QCoreApplication.translate("MainWindow", u"Tab 1", None))
+        self.label_5.setText(QCoreApplication.translate("MainWindow", u"YOU", None))
+        self.label_7.setText(QCoreApplication.translate("MainWindow", u"TUBE", None))
+        self.label_6.setText(QCoreApplication.translate("MainWindow", u"CORTAR PARTES DO V\u00cdDEO", None))
+        self.txt_file.setPlaceholderText(QCoreApplication.translate("MainWindow", u"selecione o v\u00eddeo", None))
+        self.btn_open.setText(QCoreApplication.translate("MainWindow", u"OPEN", None))
+        self.label_8.setText(QCoreApplication.translate("MainWindow", u"tempo inicial", None))
+        self.txt_seg_inicial.setPlaceholderText(QCoreApplication.translate("MainWindow", u"segundo inicial", None))
+        self.label_9.setText(QCoreApplication.translate("MainWindow", u"tempo final", None))
+        self.txt_seg_final.setPlaceholderText(QCoreApplication.translate("MainWindow", u"segundo final", None))
+        self.btn_corvert.setText(QCoreApplication.translate("MainWindow", u"CONVERTER", None))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_2), QCoreApplication.translate("MainWindow", u"Tab 2", None))
     # retranslateUi
 
